@@ -1,0 +1,72 @@
+All the Major things about the logic of scraping yelp has been added in script via comments. 
+
+In this readme file, I'll just share the working of the script. 
+
+This script is purely based on selenium 4.0 for scraping purpose. 
+
+And lastly, Yelp doesn't allow to scrape its public data as it's mentioned on robots.txt
+
+I've created this script just for educational purpose and I don't want any one to do 
+unethical things. 
+
+
+# Working of the script 
+Cookie part- The script first checks whether the cookie is availabe in the script folder and 
+is only 60 minutes old as per current time. 
+If the script is old for more than 60 minutes, it will generate a new cookie and 
+will load it in the selenium driver, else it will reuse the same cookie. 
+
+
+# Chrome profile part 
+This script uses chrome devTools protocol combined with selenium webdriver to run the script.
+(Using profile reduces chance of detection)
+And chrome local user profile have been disabled or won't work as per latest updated chrome
+installed in your system
+
+So this works well. 
+
+*There is one time configure setup available in launch_chrome_debug function comments
+
+
+# Features, 
+
+The script uses, Random user agent, stealth, visiting chrome and searching related keyword
+so that it pop up yelp website first, Once visited yelp website, a human type activity performed
+randomly such as scrolling till end of page, hower etc. 
+Once done, it will visit the main url (from which data to be scraped)
+again it might scroll the page or click a image etc, 
+
+Once that's done, 
+
+it will scrape the data and print it in the terminal. 
+
+
+
+Things to know before using this script,
+
+I've just scraped 1 url data, if you want you can create a loop and scrape data
+and save it in your required format. 
+Please have a good delay time while scraping another url.
+Use good proxies if you can, 
+Once blocked by yelp, you'll need to mail them and then get unblocked. 
+
+
+Using Cookies and request with Bs4 library wil be a good way of geting data 
+rather than only Selenium. 
+
+Lastly, Respect Robots.txt of the site. 
+
+I've created this script for educational purpose, I don't intend to 
+promote any unethical practises. 
+
+
+
+
+
+
+
+
+
+
+
+
